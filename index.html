@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Callback</title>
+</head>
+<body>
+  
+
+   
+  <script>
+
+const sunnyDay = true
+
+function beachDay(callback){
+  if(sunnyDay){
+    let beachData = {
+      beach: 'Coney Island',
+      friends: 'Zach and Rodney',
+      when: 'Friday'
+    }
+    callback(beachData)
+  }else{
+    alert('No beach this week!')
+  }
+}
+
+function announcementForBeachDay(message){
+  alert('I have decided to go to ' + message.beach + ' with ' + message.friends + ' on ' + message.when + '!');
+}
+
+beachDay(announcementForBeachDay)
+
+
+
+  </script>
+</body>
+</html>
